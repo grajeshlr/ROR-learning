@@ -1,0 +1,9 @@
+
+
+<h1 style="color:blue;margin-left: 40px;text-decoration: underline;text-shadow: 3px 3px red;">Update Post Details</h1>
+<%= form_for @post do |form| %>
+  <%= form.text_field :content, placeholder: "content" %>
+  <%= form.text_field :tittle, placeholder: "tittle" %>
+  <%= form.submit %>
+  
+<% end %>
