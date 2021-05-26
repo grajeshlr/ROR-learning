@@ -19,7 +19,9 @@ class PostsController < ApplicationController
 
   def edit
     @post = Post.find(params[:id])
+
   end
+  
 
   def update
     @post = Post.find(params[:id])
@@ -34,6 +36,12 @@ class PostsController < ApplicationController
     @post.destroy
 
     redirect_to posts_path
+  end
+
+  def user
+    @user = User.find(params[:user_id])
+
+    @posts = Post.where(user: @user)
   end
 
   private

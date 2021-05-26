@@ -1,13 +1,13 @@
 <h1 style="color:blue;margin-left: 40px;text-decoration: underline;text-shadow: 3px 3px pink;" >welcome my post_app</h1>
 
 
-<ul>
-<li><%= button_to 'create', new_post_path,method: 'get' %></li>
+<tr>
+<h4><%= button_to 'create', new_post_path,method: 'get' %></h4>
 
   <% @posts.each do |post| %>
-    <li><%= link_to post.content, post_path(post)  %></li>
-    <li><%= button_to 'edit', edit_post_path(post),method: 'get'%></li>
-    <li><%= button_to 'remove', post_path(post),method: :delete %></li>
+    <tr><%= link_to post.content, post_path(post)  %></tr>
+    <tr><%= button_to 'edit', edit_post_path(post),method: 'get'%></tr>
+    <tr><%= button_to 'remove', post_path(post),method: :delete, data: {confirm:'Are you sure?'} %></tr>
   <% end %>
   
-</ul>
+</tr>

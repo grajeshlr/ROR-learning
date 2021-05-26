@@ -1,0 +1,9 @@
+
+<h1 style="color:maroon;margin-left: 40px;text-decoration: underline;text-shadow: 3px 3px pink;">Create a User</h1>
+
+<%= form_for @user do |form| %>
+  <%= form.text_field :name, placeholder: "name" %>
+  <%= form.submit %>
+<% end %>
+
+

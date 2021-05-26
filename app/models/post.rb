@@ -1,3 +1,3 @@
 class Post < ActiveRecord::Base
-    has_one :users
+    belongs_to :users, foreign_key: true
 end
