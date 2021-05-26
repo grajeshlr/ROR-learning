@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   #get 'users/name:string'
 
-  resources :posts
-  resources :users
+  
+  resources :users do 
+    resources :posts
+  end
   
 
   

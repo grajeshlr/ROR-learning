@@ -2,12 +2,12 @@
 
 
 <tr>
-<h4><%= button_to 'create', new_post_path,method: 'get' %></h4>
+<h4><%= button_to 'create', new_user_post_path,method: 'get' %></h4>
 
   <% @posts.each do |post| %>
-    <tr><%= link_to post.content, post_path(post)  %></tr>
-    <tr><%= button_to 'edit', edit_post_path(post),method: 'get'%></tr>
-    <tr><%= button_to 'remove', post_path(post),method: :delete, data: {confirm:'Are you sure?'} %></tr>
+    <tr><%= link_to post.content, new_user_post_path(post)  %></tr>
+    <tr><%= button_to 'edit', edit_user_post_path(post),method: 'get'%></tr>
+    <tr><%= button_to 'remove', new_user_post_path(post),method: :delete, data: {confirm:'Are you sure?'} %></tr>
   <% end %>
   
 </tr>
